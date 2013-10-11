@@ -29,6 +29,7 @@ class Amplifier {
         bool routeSource(string source);
         Association* getAssociation(string name);
         string getSources();
+        string getCurrentAssociation();
     private:
         void muteSpeakers();
         void unmuteSpeakers();

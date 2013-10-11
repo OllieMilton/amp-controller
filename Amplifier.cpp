@@ -80,3 +80,7 @@ Association* Amplifier::getAssociation(string name) {
 string Amplifier::getSources() {
     return *sources;
 }
+
+string Amplifier::getCurrentAssociation() {
+    return assoc;
+}

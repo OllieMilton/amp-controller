@@ -17,6 +17,7 @@ const string OFF        = "off";
 const string UP         = "up";
 const string DOWN       = "down";
 const string GET_SRCS   = "getsrcs";
+const string GET_CUR_SRC = "getcursrc";
 
 class HttpAmpRequestHandler : public HTTPRequestHandler {
     static Amplifier* amplifier;

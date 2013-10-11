@@ -65,6 +65,10 @@ int HttpAmpRequestHandler::handleGetRequest() {
     if (msg.args.count(GET_SRCS)) {
         outBuf = (char*)amplifier->getSources().c_str();
     }
+    if (msg.args.count(GET_CUR_SRC)) {
+        outBuf = (char*)amplifier->getCurrentAssociation().c_str();
+    }
+    
     startResponse(result, strlen(outBuf));
     processResponse(strlen(outBuf), outBuf);
     endResponse();
