@@ -44,10 +44,10 @@ int main() {
         INFO("Server not starting !");
         exit(0);
     }
-    
+ 
     INFO("Server started");
     while (true) {
         svr.poll();
     }
-        
+     
 }
