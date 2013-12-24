@@ -14,6 +14,7 @@ Serial pc(USBTX, USBRX);
 const int port = 80;
 int main() {
     pc.baud(460800);
+    INFO("Amp controller V0.1");
     AmpConf conf;
     conf.ampPower = p17;
     conf.x0 = p19;
@@ -44,7 +45,6 @@ int main() {
         INFO("Server not starting !");
         exit(0);
     }
- 
     INFO("Server started");
     while (true) {
         svr.poll();

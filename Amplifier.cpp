@@ -66,7 +66,7 @@ void Amplifier::unmuteSpeakers() {
 }
 
 bool Amplifier::routeSource(string source) {
-    if (assoc != "") {
+    if (!assoc.empty()) {
         switcher->unRouteAssociations(assoc, DEST_ASC);
     }
     assoc = source;

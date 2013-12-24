@@ -19,8 +19,9 @@ HttpAmpRequestHandler::~HttpAmpRequestHandler() {
 int HttpAmpRequestHandler::handleGetRequest() {
     INFO("%s",m_rootPath.c_str());
     INFO("%s",m_localPath.c_str());
-    char* outBuf = "UNRECOGNISED-COMMAND";
     int result = HTTP_NotFound;
+    char* outBuf = "UNRECOGNISED-COMMAND";
+    
     if (msg.args.count(POWER)) {
         if (msg.args[POWER] == ON) {
             amplifier->powerOn();        
